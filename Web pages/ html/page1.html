@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1.css">
+    <title>HeartRateMonitoring</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <h2><a href="main.html">Group-05</a></h2>
+
+        <nav>
+            <ul>
+                <li><a href="page2.html">About</a></li>
+                <li><a href="page4.html">Team</a></li>
+                <li><a href="page3.html">SourceCode</a></li>
+                <li><a class="active" href="page1.html">Try It</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <center><div class = "dis">
+            <video hidden id="webcam" width="780" height="540"></video>
+            <canvas id="canvas" width="780" height="540"></canvas>
+          </div></center>
+        <div class="info">
+            <div class="bp">bpm: <span id = bpm >0</span></div>
+            <div class = "sp">Speed: <span id = speed>Loading</span></div>
+        </div>
+    </main>
+    <div class = "disc">
+        
+        <p><span>Disclamiler: </span> The reading that that it gives are not 100% accurate to the what the your current heart-rate is and there might be some sudden spikes in heart rate, it may veary from place to place and time to time. This project is made for educational purpose and must not used in case of emergencies or other critical conditions. <br><span>Please Note:</span> This project is neither certified by any healthcare organization nor is approved by  medical personal.This project is only to show the the potential of the concept and idea that has been worked on by researchers.Keep this in mind and please use it wisely, always check any information from <span>trusted sources.</span></p>
+    </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

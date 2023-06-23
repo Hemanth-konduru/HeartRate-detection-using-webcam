@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="page2.css" rel="stylesheet">
+	<title>About page</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h2><a href="main.html">Group-05</a></h2>
+
+			<nav>
+				<ul>
+					<li><a class="active" href="page2.html">About</a></li>
+					<li><a href="page4.html">Team</a></li>
+					<li><a href="page3.html">SourceCode</a></li>
+					<li><a href="page1.html">Try It</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="pagename">
+				<h1>About our Project</h1>
+			</div>
+			<div class="abstract">
+				<h2>Abstract</h2>
+				<p>The early detection of variation in heart rate is essential for effective treatment because
+					cardiovascular disease is one of the leading cause for death worldwide. In the field of medical
+					diagnostics, heartbeat detection is a crucial task, but conventional methods call for specialized
+					tools and qualified personnel. The use of signal processing and computer vision techniques has
+					gained popularity in recent years. This study describes a technique for real-time heart rate
+					monitoring using a webcam and JavaScript. The suggested method takes the facial region out of the
+					webcam's video frames and uses signal processing to estimate the heart rate. In particular, the
+					technique detects the subtle color changes brought on by the blood flow in the skin and uses the
+					chrominance information of the facial region to estimate the heart rate. The method also employs
+					motion compensation algorithms to decrease the impact of head motions and facial expressions on
+					heart rate measurement. The suggested approach can offer a low-cost and non-invasive way to detect a
+					person's heart rate and has potential applications in healthcare, fitness monitoring, and wellness
+					tracking.</p>
+			</div>
+			<div class="working">
+				<div class="title">
+					<h1>Working Methodology</h1>
+				</div>
+				<div class="topcards">
+					<p class="one"><span>1, </span>This technique's fundamental premise is that blood flowing down the
+						face alters the skin's hue in a way that is apparent to the camera but invisible to the human
+						eye.
+						There isn't much information in the sections for the eyes, lips, and nose. So, to obtain regions
+						with skin probability, we apply a skin mask.
+						Record Video with Webcam: A subject (human) sits in front of a webcam and records footage.</p>
+					<p class="two"><span>2, </span>Face Identification: The Affine transform algorithm is employed. High
+						identification efficiency, few false positives, and practicality are some of this algorithm's
+						characteristics.The Haar function is used to rule out some traits that are common to all humans
+						Integral pictures analyze rectangular characteristics in a consistent amount of time. OpenCv is
+						used to train the classifier and the faceial recognization algorithem to get the best features.
+					</p>
+					<p class="three"><span>3, </span>RGB to LAB Conversion: Here, RGB photos of the same items taken
+						with various camera types and ambient illumination appear differently. The LAB colour space is
+						independent of unit. Here, the L denotes the image's brightness, the A and B colour channels
+						denote additional colour combinations, and the A represents the red or green component colour. A
+						negative A is represented by green, and a positive A is represented by red. Yellow or blue are
+						represented on the Baxis. Yellow denotes positive values of B and blue indicates negative values
+						of B. The numbers L=0, A=0, B=0, depict absolute black and L=100 depict white. In the RGB colour
+						space, light is a significant factor, although in outdoor settings, it is not as significant.
+					</p>
+				</div>
+				<div class="botcards">
+					<p class="one"><span>4, </span>Skin Identification: All unnecessary regions that do not give useful
+						information, such as nostrils, eyebrows, lips, chin,checks, eyes, are detected and removed using
+						a skin classifier.These other features are not so useful in our case, moreover adding this and
+						calculating with all the feautres of the face might create unnecessary noise and cause sudden
+						highs and lows in the signle which alter the output drastically.
+						This creats a sudden spike in the output jumping well over the limit,this may also effect
+						accuracy. So, for those reasons we elimated some face features like the nose, lips, chin etc</p>
+					<p class="two"><span>5, </span>Signal Amplification: The three signals used in the LAB colour space
+						are ‘L’, ‘A’, and ‘B’, where ‘L stands for the brightness of the image and ‘A’ and ‘B together
+						stand for its fusion of the other two channels. L lacks color information, thus you must
+						separate A and B channels of color to from it. Blood pulses cause minute changes in brightness
+						and intensity that are recorded in the LAB colour space. Independent Component Analysis or
+						Principal Component Analysis reduces dimensionality when utilised.</p>
+					<p class="three"><span>6, </span>HR Recognition: HR can be calculated from the recovered signal
+						using time or frequency-domain analysis. The Fast Fourier Transform (FFT) can be used to convert
+						signals into the frequency domain. A signal that has been sampled over a predetermined amount of
+						time is used to determine the signal's peak detection method. The person's detected HR is
+						reported as this peak value. Peak-finding algorithm following the Fast Fourier Transform's
+						conversion of the signal to the frequency domain. We must first count the frequency range's
+						peaks and keep track of how long it takes for the first 30 frames of the image before we can
+						calculate the heart rate in real-time.</p>
+				</div>
+			</div>
+			<div class="algo">
+				<div class="titl">
+					<h1>Algorithem details</h1>
+				</div>
+				<div class="algod">
+					<p class="One"><span>The Affine transform algorithm </span><br><br>
+						Affine transformations are a class of mathematical operations that encompass rotation, scaling, translation, shearing, and several similar transformations that are regularly used for various applications in mathematics and computer graphics. To start, we will draw a distinct (yet thin) line between affine and linear transformations before discussing the augmented matrix formalism typically used in practice.
+						The affine transformation technique is typically used to correct for geometric distortions or deformations that occur with non-ideal camera angles. For example, satellite imagery uses affine transformations to correct for wide angle lens distortion, panorama stitching, and image registration. Transforming and fusing the images to a large, flat coordinate system is desirable to eliminate distortion. This enables easier interactions and calculations</p>
+
+					<p class="two"><span>The Fast Fourier Transform (FFT) </span><br><br>
+						A fast Fourier transform (FFT) is an algorithm that calculates the
+						discrete Fourier transform (DFT) of some sequence – the discrete Fourier transform
+						is a tool to convert specific types of sequences of functions into other types
+						of representations. Another way to explain discrete Fourier transform is that it
+						transforms the structure of the cycle of a waveform into sine components.
+						A fast Fourier transform can be used in various types of signal processing. It may be useful in reading things like sound waves, or for any image-processing technologies. A fast Fourier transform can be used to solve various types of equations, or show various types of frequency activity in useful ways.</p>
+
+					<p class="three"><span>OpenCV Algorithm</span> <br><br>
+						OpenCV is the huge open-source library for the computer vision, machine learning, and image
+						processing and now it plays a major role in real-time operation which is very important in
+						today’s systems. By using it, one can process images and videos to identify objects, faces, or
+						even handwriting of a human. When it integrated with various libraries, such as NumPy, python is
+						capable of processing the OpenCV array structure for analysis. To Identify image pattern and its
+						various features we use vector space and perform mathematical operations on these features. The
+						first OpenCV version was 1.0. OpenCV is released under a BSD license and hence it’s free for
+						both academic and commercial use. It has C++, C, Python and Java interfaces and supports
+						Windows, Linux, Mac OS, iOS and Android.
+					</p>
+				</div>
+			</div>
+			<div class="tech">
+				<div class="tools">
+					<h3>Tools used: </h3>
+					<ul>
+						<li><img src="Resources\HTML5_logo_and_wordmark.svg.png" alt="Image not found"><a
+								href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiA5u2tj43_AhWaXmwGHbcGB80QFnoECC8QAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTML&usg=AOvVaw2gzluefsF-H7bfUJ9qJGae"
+								target="_blank">HTML</a></li>
+						<li><img src="Resources\5968358.png" alt="Image not found"><a
+								href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjhicjDj43_AhUQbmwGHYP_B-sQFnoECBYQAQ&url=https%3A%2F%2Fsass-lang.com%2F&usg=AOvVaw0p_IRgLEbIPRGWtlW7Wph8"
+								target="_blank">SCSS</a></li>
+						<li><img src="Resources\JavaScript-logo.png" alt="Image not found"><a
+								href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj0_K_Oj43_AhUXTmwGHckvAcQQFnoECDUQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJavaScript&usg=AOvVaw3D0Sd-NOChK26UxuZJmQZN"
+								target="_blank">JavaScript</a></li>
+						<li><img src="Resources\OpenCV_logo_no_text.png" alt="Image not found"><a
+								href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi40rTaj43_AhWSWGwGHYPEAUIQFnoECBIQAQ&url=https%3A%2F%2Fopencv.org%2F&usg=AOvVaw0nLWFztJIlbNMAYoheT9Qm"
+								target="_blank">OpenCV</a></li>
+						<li><img src="Resources\images.png" alt="Image not found"><a
+								href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwilzrbij43_AhX0VmwGHSZnBeUQFnoECAsQAQ&url=https%3A%2F%2Fwww.noldus.com%2Fblog%2Fwhat-is-rppg&usg=AOvVaw3PEMNDZQEAItKeMIuqd3Zw"
+								target="_blank">rPPG</a></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>
