@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #9fc4de;
+  background: rgb(113, 101, 255);
+  background: linear-gradient(156deg, rgb(113, 101, 255) 0%, rgb(237, 199, 250) 100%);
+  background-attachment: fixed;
+}
+body .wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+body .wrapper header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+body .wrapper header h2 {
+  background-color: transparent;
+}
+body .wrapper header h2 a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: black;
+  padding: 6px;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+}
+body .wrapper header h2 a:hover {
+  background-color: #238bfe;
+  color: white;
+  border-radius: 5px;
+}
+body .wrapper header nav {
+  margin: 3em 0em 3em 3em;
+  background-color: transparent;
+}
+body .wrapper header nav ul {
+  display: flex;
+  gap: 4.1em;
+  list-style-type: none;
+  margin: 0;
+  background-color: transparent;
+}
+body .wrapper header nav ul .active {
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+}
+body .wrapper header nav ul .active:hover {
+  background-color: blue;
+}
+body .wrapper header nav ul a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 4px 10px;
+  bottom: 0px;
+  transition: bottom 0.25s;
+  background-color: transparent;
+}
+body .wrapper header nav ul a:hover {
+  bottom: 6px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+body .wrapper main .titl {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  margin: 3em;
+}
+body .wrapper main .titl h1 {
+  font-size: 40px;
+  background: -webkit-linear-gradient(295deg, rgba(254, 3, 3, 0.8196078431), #5100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+body .wrapper main .file {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2em;
+}
+body .wrapper main .file .srcs {
+  margin: 0.2em;
+  background-color: #238bfe;
+  padding: 2em;
+  border-radius: 10px;
+}
+body .wrapper main .file .srcs img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 1em;
+}
+body .wrapper main .file .srcs a {
+  text-align: center;
+  padding: 0.5em;
+  margin: 2em;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(236, 94, 94);
+  border-radius: 10px;
+}
+body .wrapper main .file .srcs a:hover {
+  background-color: rgb(231, 59, 59);
+  box-shadow: 1px 1px 20px rgb(13, 95, 166);
+  transition: ease-in-out 0.25s;
+}
+body .wrapper main .file .repo {
+  background-color: #238bfe;
+  padding: 2em;
+  border-radius: 10px;
+}
+body .wrapper main .file .repo img {
+  height: 240px;
+  width: 240px;
+  margin-bottom: 2em;
+}
+body .wrapper main .file .repo a {
+  text-align: center;
+  padding: 0.5em;
+  margin: 3em;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(236, 94, 94);
+  border-radius: 10px;
+}
+body .wrapper main .file .repo a:hover {
+  background-color: rgb(231, 59, 59);
+  box-shadow: 1px 1px 20px rgb(13, 95, 166);
+  transition: ease-in-out 0.25s;
+}
+body .wrapper main .file .repap {
+  background-color: #238bfe;
+  padding: 2em;
+  border-radius: 10px;
+}
+body .wrapper main .file .repap img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 1em;
+}
+body .wrapper main .file .repap a {
+  text-align: center;
+  margin: 1.6em;
+  padding: 0.5em;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(236, 94, 94);
+  border-radius: 10px;
+}
+body .wrapper main .file .repap a:hover {
+  background-color: rgb(231, 59, 59);
+  box-shadow: 1px 1px 20px rgb(13, 95, 166);
+  transition: ease-in-out 0.25s;
+}/*# sourceMappingURL=page3.css.map */
